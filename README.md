@@ -25,5 +25,5 @@ $ cd 036react
 $ npm i
 $ npm run dev #Run develop
 $ npm run build #Make production build
-$ npm run start #Run production build
+$ npm run preview #Run production build
 ```
