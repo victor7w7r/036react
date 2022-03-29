@@ -1,31 +1,16 @@
-export type TData = {
-    data?: string,
-};
-
 export type DataState = {
-    dataSend?: TData
-    loading?: boolean;
-    success?: boolean;
+    data?: string,
+    loading?: boolean,
+    success?: boolean
 };
 
-export enum ActionTypeData {
-    DATA_SEND_REQUEST = 'DATA_SEND_REQUEST',
-    DATA_SEND_SUCCESS = 'DATA_SEND_SUCCESS',
-    DATA_SEND_FAIL = 'DATA_SEND_FAIL',
+export enum DataActionsType {
+    Request = 'DATA_SEND_REQUEST',
+    Success = 'DATA_SEND_SUCCESS',
+    Error = 'DATA_SEND_FAIL'
 };
 
-export type actionDataRequest = {
-    type: ActionTypeData.DATA_SEND_REQUEST;
-};
-
-export type actionDataSuccess = {
-    type: ActionTypeData.DATA_SEND_SUCCESS;
-    payload: TData;
-};
-
-export type actionDataFail = {
-    type: ActionTypeData.DATA_SEND_FAIL;
-    payload: TData;
-};
-
-export type ActionData = actionDataRequest | actionDataSuccess | actionDataFail;
+export type DataActions = 
+    | { type: DataActionsType.Request }
+    | { type: DataActionsType.Success, payload: string }
+    | { type: DataActionsType.Error, payload: string }

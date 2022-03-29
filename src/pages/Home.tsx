@@ -1,28 +1,24 @@
-import type { FC } from 'react';
-import { TypedUseSelectorHook, useSelector } from 'react-redux';
-import { RootState } from '../redux';
-import { DataState } from '../types';
+import { FC, useContext } from 'react';
+
+import { StoreContext } from '../store';
 
 import brand from '../assets/brand.png';
 
 import HomeStyle from '../styles/Home.module.scss';
 
-export const useTypedSelector: TypedUseSelectorHook<RootState> = useSelector;
-
 export const Home: FC = (): JSX.Element => {
 
-    const textStored: DataState = useTypedSelector(state=>state.data);
-    const { dataSend }: DataState = textStored;
+    const { state } = useContext(StoreContext);
 
     return (
         <>
             <h3 className="text-center mt-3">Happy Hacking! with Typescript?</h3>
             <p className={`text-center mt-3 ${HomeStyle.roboto}`}>SCSS is working? Yes, with Roboto</p>
             {
-                dataSend?.data !== '' ? (
-                    <p className="text-center mt-3">Redux State: Yes, you write <b>{dataSend?.data || ''}</b></p>
+                state.data !== '' ? (
+                    <p className="text-center mt-3">Store State: Yes, you write <b>{state.data || ''}</b></p>
                 ) : (
-                    <p className="text-center mt-3">Redux State: Not yet.</p>
+                    <p className="text-center mt-3">Store State: Not yet.</p>
                 ) 
             }
             <div className="row mt-4">

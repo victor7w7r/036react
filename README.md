@@ -13,17 +13,15 @@ Is the best programming language for web. Made with ❤️ by
 - axios: Promise based HTTP client for the browser
 - sass: For nested and optimized CSS
 - firebase: For firebase use
-- redux: The best predictable state container
-- react-redux: Redux package for react
-- redux-devtools-extension: View the redux interactions in Google Chrome
+- react-firebase-hooks: Hooks for firebase
 
-### Run and Develop
+### Run and Develop (Consider using yarn)
 
 ``` bash
 $ git clone https://github.com/victor7w7r/036react
 $ cd 036react
-$ npm i
-$ npm run dev #Run develop
-$ npm run build #Make production build
-$ npm run preview #Run production build
+$ yarn install
+$ yarn dev #Run develop
+$ yarn build #Make production build
+$ yarn preview #Run production build
 ```

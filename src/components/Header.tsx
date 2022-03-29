@@ -12,7 +12,7 @@ export const Header: FC = (): JSX.Element => {
                 <Link to="/"><a className="btn btn-dark mr-2 oneclass"> &nbsp; React + TS Template</a></Link>
             </div>
             <div className="d-flex">
-                <Link to="/redux"><a className="btn btn-dark mr-2">Redux Example</a></Link>
+                <Link to="/store"><a className="btn btn-dark mr-2">Store Example</a></Link>
             </div>
         </div>
     );
