@@ -12,13 +12,18 @@ Is the best programming language for web. Made with ❤️ by
 
 - axios: Promise based HTTP client for the browser
 - sass: For nested and optimized CSS
-- firebase: For firebase use
-- react-firebase-hooks: Hooks for firebase
+
+### Change to blank template
+
+``` bash
+$ git clone https://github.com/victor7w7r/036react
+$ cd 036react
+$ git checkout blank
+```
 
 ### Run and Develop (Consider using yarn)
 
 ``` bash
-$ git clone https://github.com/victor7w7r/036react
 $ cd 036react
 $ yarn install
 $ yarn dev #Run develop
