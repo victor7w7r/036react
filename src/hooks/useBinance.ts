@@ -10,10 +10,10 @@ export const useBinance = () => {
     
     const getCurrencies = async() => {
         const resp = await binanceData.get<TBinance[]>('');
-        const BTCUSDT =  resp.data.find(curr => curr.symbol === 'BTCUSDT');
+        const BTCUSDT = resp.data.find(curr => curr.symbol === 'BTCUSDT');
         setBin( BTCUSDT );
         setIsLoading(false);
-    }
+    };
     
     useEffect(() => {
         getCurrencies();
