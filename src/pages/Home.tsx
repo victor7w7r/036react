@@ -1,6 +1,6 @@
 import { FC, useContext } from 'react';
 
-import { StoreContext } from '../context';
+import { DataContext } from '../context';
 import { useBinance } from '../hooks';
 
 import brand from '../assets/brand.png';
@@ -9,7 +9,7 @@ import HomeStyle from '../styles/Home.module.scss';
 
 export const Home: FC = (): JSX.Element => {
 
-    const { dataState } = useContext(StoreContext);
+    const { dataState } = useContext(DataContext);
     const { bin, isLoading } = useBinance();
 
     return (

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { binanceData } from '../api/binance';
-import { TBinance } from '../types/TBinance';
+import type { TBinance } from '../types/TBinance';
 
 export const useBinance = () => {
     

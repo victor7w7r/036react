@@ -1,4 +1,4 @@
-import { DataState, DataActions } from '../types';
+import type { DataState, DataActions } from '../types';
 
 export const DataReducer = (state: DataState, action: DataActions): DataState => {
 

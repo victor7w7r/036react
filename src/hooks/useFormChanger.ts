@@ -1,11 +1,11 @@
 import { ChangeEvent, useContext, useState } from 'react';
 
-import { StoreContext } from '../context';
+import { DataContext } from '../context';
 
 export const useFormChanger = () => {
 
     const [text, setText] = useState<string>('');
-    const {dataState, success} = useContext(StoreContext);
+    const {dataState, success} = useContext(DataContext);
 
     const handleSubmit = (e: ChangeEvent<HTMLFormElement>): void => {
         e.preventDefault();
