@@ -1,5 +1,4 @@
 import type { FC } from 'react';
-
 import { useFormChanger } from '../hooks/useFormChanger';
 
 export const StoreEx: FC = (): JSX.Element => {
@@ -20,7 +19,7 @@ export const StoreEx: FC = (): JSX.Element => {
                                     <button type="submit" className="btn btn-primary text-center">Submit</button>
                                 </div>
                                 {
-                                    dataState.data !== '' 
+                                    dataState.data
                                         ? <p className="text-center mt-3">Store State: Yes, you write <b>{dataState.data || ''}</b></p>
                                         : <p className="text-center mt-3">Store State: Not yet.</p>
                                 }

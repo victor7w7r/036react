@@ -17,7 +17,7 @@ export const Home: FC = (): JSX.Element => {
             <h3 className="text-center mt-3">Happy Hacking! with Typescript?</h3>
             <p className={`text-center mt-3 ${HomeStyle.roboto}`}>SCSS is working? Yes, with Roboto</p>
             {
-                dataState.data !== '' 
+                dataState.data
                     ? <p className="text-center mt-3">Store State: Yes, you write <b>{dataState.data || ''}</b></p>
                     : <p className="text-center mt-3">Store State: Not yet.</p>
                 
