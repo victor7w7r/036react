@@ -1,2 +1,2 @@
 export * from './dataReducer';
-export * from './Store';
+export * from './DataContext';

@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { Store } from './store';
+import { DataContext } from './context';
 import { MainLayout } from './components/layouts/MainLayout';
 
 import { Home } from './pages/Home';
@@ -13,14 +13,14 @@ export const App: FC = (): JSX.Element => {
 
   return (
     <Router>
-      <Store>
+      <DataContext>
         <MainLayout>
           <Routes>
             <Route path="/store" element={<StoreEx />} />
             <Route path="/" element={<Home />}/>
           </Routes>
         </MainLayout>
-      </Store>
+      </DataContext>
     </Router>
   );
 };

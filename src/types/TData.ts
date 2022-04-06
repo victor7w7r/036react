@@ -4,13 +4,12 @@ export type DataState = {
     success?: boolean
 };
 
-export enum DataActionsType {
-    Request = 'DATA_SEND_REQUEST',
-    Success = 'DATA_SEND_SUCCESS',
-    Error = 'DATA_SEND_FAIL'
+export type DataContextProps = {
+    dataState: DataState;
+    success: (data: string) => void;
 };
 
 export type DataActions = 
-    | { type: DataActionsType.Request }
-    | { type: DataActionsType.Success, payload: string }
-    | { type: DataActionsType.Error, payload: string }
+    | { type: 'DATA_SEND_REQUEST'}
+    | { type: 'DATA_SEND_SUCCESS', payload: string }
+    | { type: 'DATA_SEND_FAIL', payload: string };

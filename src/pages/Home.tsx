@@ -1,6 +1,7 @@
 import { FC, useContext } from 'react';
 
-import { StoreContext } from '../store';
+import { StoreContext } from '../context';
+import { useBinance } from '../hooks';
 
 import brand from '../assets/brand.png';
 
@@ -8,18 +9,18 @@ import HomeStyle from '../styles/Home.module.scss';
 
 export const Home: FC = (): JSX.Element => {
 
-    const { state } = useContext(StoreContext);
+    const { dataState } = useContext(StoreContext);
+    const { bin, isLoading } = useBinance();
 
     return (
         <>
             <h3 className="text-center mt-3">Happy Hacking! with Typescript?</h3>
             <p className={`text-center mt-3 ${HomeStyle.roboto}`}>SCSS is working? Yes, with Roboto</p>
             {
-                state.data !== '' ? (
-                    <p className="text-center mt-3">Store State: Yes, you write <b>{state.data || ''}</b></p>
-                ) : (
-                    <p className="text-center mt-3">Store State: Not yet.</p>
-                ) 
+                dataState.data !== '' 
+                    ? <p className="text-center mt-3">Store State: Yes, you write <b>{dataState.data || ''}</b></p>
+                    : <p className="text-center mt-3">Store State: Not yet.</p>
+                
             }
             <div className="row mt-4">
                 <div className="col-sm"></div>
@@ -30,6 +31,25 @@ export const Home: FC = (): JSX.Element => {
                             </div>
                     </div>
                 <div className="col-sm"></div>
+            </div>
+            <br />
+            <div className="container">
+                <div className="row d-flex justify-content-center">
+                    <div className="col-3">
+                        <h3 className="text-center mt-3">Lets see bitcoin price</h3>
+                        <br />
+                        {
+                            isLoading 
+                                ? <p className='text-center'>Loading...</p>  
+                                : ( <>
+                                        <p className='text-center'>Symbol: {bin?.symbol}</p>
+                                        <p className='text-center'>Price: {bin?.askPrice}</p>
+                                    </>
+                                )
+                        }
+
+                    </div>
+                </div>
             </div>
         </>
     );

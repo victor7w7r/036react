@@ -1,40 +1,28 @@
-import { FC, useContext, ChangeEvent, useEffect, useState } from 'react';
+import type { FC } from 'react';
 
-import { StoreContext } from '../store';
-import { DataActionsType } from '../types';
+import { useFormChanger } from '../hooks/useFormChanger';
 
 export const StoreEx: FC = (): JSX.Element => {
 
-    const [text, setText] = useState<string>('');
-
-    const {state, dispatch} = useContext(StoreContext);
-
-    const submitRedux = (e: ChangeEvent<HTMLFormElement>): void => {
-        e.preventDefault();
-        dispatch({type: DataActionsType.Success, payload: text});
-    };
-
-    useEffect(() => {}, [text]);
+    const { handleSubmit, handleChange, dataState } = useFormChanger();
 
     return (
         <>
             <h3 className="text-center mt-3">Store Example</h3>
             <p className="text-center mt-3">Write anything in this form and send!</p>
-            <form onSubmit={submitRedux}>
+            <form onSubmit={handleSubmit}>
                 <div className="container">
                     <div className="row">
                         <div className="col-sm"></div>
                         <div className="col-sm">
-                                <input type="text" className="form-control mb-4" onChange={(e) => setText(e.target.value)} required placeholder="here" />
+                                <input type="text" className="form-control mb-4" onChange={({target}) => handleChange(target.value)} required placeholder="here" />
                                 <div className="d-flex justify-content-center">
                                     <button type="submit" className="btn btn-primary text-center">Submit</button>
                                 </div>
                                 {
-                                    state.data !== '' ? (
-                                        <p className="text-center mt-3">Store State: Yes, you write <b>{state.data || ''}</b></p>
-                                    ) : (
-                                        <p className="text-center mt-3">Store State: Not yet.</p>
-                                    ) 
+                                    dataState.data !== '' 
+                                        ? <p className="text-center mt-3">Store State: Yes, you write <b>{dataState.data || ''}</b></p>
+                                        : <p className="text-center mt-3">Store State: Not yet.</p>
                                 }
                         </div>
                         <div className="col-sm"></div>
