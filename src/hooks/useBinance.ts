@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import { binanceData } from '../api/binance';
 import type { TBinance } from '../types/TBinance';
 

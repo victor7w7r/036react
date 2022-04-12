@@ -1,4 +1,5 @@
 import type { FC } from 'react';
+
 import { useFormChanger } from '../hooks/useFormChanger';
 
 export const StoreEx: FC = (): JSX.Element => {

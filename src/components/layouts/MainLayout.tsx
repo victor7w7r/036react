@@ -1,13 +1,12 @@
-import type { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
 import { Header } from "../Header";
 
-export const MainLayout: FC = ({ children }): JSX.Element => {
+type Props = { children?: ReactNode };
 
-    return (
-        <>
-            <Header />
-            <main>{children}</main>
-        </>
-    );
-};
+export const MainLayout: FC<Props> = ({ children }): JSX.Element => (
+    <>
+        <Header />
+        <main>{children}</main>
+    </>
+);
