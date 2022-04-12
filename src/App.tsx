@@ -9,18 +9,15 @@ import { StoreEx } from './pages/StoreEx';
 
 import './styles/style.scss';
 
-export const App: FC = (): JSX.Element => {
-
-  return (
-    <Router>
-      <DataProvider>
-        <MainLayout>
-          <Routes>
-            <Route path="/store" element={<StoreEx />} />
-            <Route path="/" element={<Home />}/>
-          </Routes>
-        </MainLayout>
-      </DataProvider>
-    </Router>
-  );
-};
+export const App: FC = (): JSX.Element => (
+  <Router>
+    <DataProvider>
+      <MainLayout>
+        <Routes>
+          <Route path="/store" element={<StoreEx />} />
+          <Route path="/" element={<Home />}/>
+        </Routes>
+      </MainLayout>
+    </DataProvider>
+  </Router>
+);
