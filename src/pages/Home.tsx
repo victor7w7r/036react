@@ -20,7 +20,6 @@ export const Home: FC = (): JSX.Element => {
                 dataState.data
                     ? <p className="text-center mt-3">Store State: Yes, you write <b>{dataState.data || ''}</b></p>
                     : <p className="text-center mt-3">Store State: Not yet.</p>
-                
             }
             <div className="row mt-4">
                 <div className="col-sm"></div>
