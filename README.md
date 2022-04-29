@@ -6,7 +6,7 @@ A very simple template for React Vite/Preact Vite/Next.js with essential package
 
 Is the best programming language for web. Made with ❤️ by
 
-![Alt text](brandwhite.png?raw=true "Title")
+![Alt text](src/assets/brandwhite.png?raw=true "Title")
 
 ### Branches for every framework
 
@@ -24,6 +24,7 @@ $ git checkout nextjs-blank
 ## Extra Packages
 
 - axios: Promise based HTTP client for the browser
+- rxjs: Reactive Extensions Library for JavaScript
 - sass: For nested and optimized CSS
 - preact/compat: Compatibility Layer for React Packages
 - js-cookie: Store data with cookies
