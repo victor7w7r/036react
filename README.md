@@ -24,6 +24,7 @@ $ git checkout nextjs-blank
 ## Extra Packages
 
 - axios: Promise based HTTP client for the browser
+- rxjs: Reactive Extensions Library for JavaScript
 - sass: For nested and optimized CSS
 - preact/compat: Compatibility Layer for React Packages
 - js-cookie: Store data with cookies

@@ -1,7 +1,8 @@
 import { FC, useContext } from 'react';
+import { Subscribe } from '@react-rxjs/core';
 
+import { BinanceCall } from '../components/BinanceCall';
 import { DataContext } from '../context';
-import { useBinance } from '../hooks';
 
 import brand from '../assets/brand.png';
 
@@ -10,7 +11,6 @@ import HomeStyle from '../styles/Home.module.scss';
 export const Home: FC = (): JSX.Element => {
 
     const { dataState } = useContext(DataContext);
-    const { bin, isLoading } = useBinance();
 
     return (
         <>
@@ -37,15 +37,9 @@ export const Home: FC = (): JSX.Element => {
                     <div className="col-3">
                         <h3 className="text-center mt-3">Lets see bitcoin price</h3>
                         <br />
-                        {
-                            isLoading 
-                                ? <p className='text-center'>Loading...</p>  
-                                : ( <>
-                                        <p className='text-center'>Symbol: {bin?.symbol}</p>
-                                        <p className='text-center'>Price: {bin?.askPrice}</p>
-                                    </>
-                                )
-                        }
+                        <Subscribe fallback={<p className='text-center'>Loading...</p>}>
+                            <BinanceCall />
+                        </Subscribe>
                     </div>
                 </div>
             </div>
