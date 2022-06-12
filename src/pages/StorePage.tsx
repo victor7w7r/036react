@@ -13,7 +13,7 @@ const floatingLabelDesign: string = `peer-focus:font-medium absolute text-sm tex
     peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 
     peer-focus:scale-75 peer-focus:-translate-y-6`;
 
-export const Store: FC = (): JSX.Element => {
+export const StorePage: FC = (): JSX.Element => {
 
     const { 
         handleSubmit, handleChange, changeToHome,

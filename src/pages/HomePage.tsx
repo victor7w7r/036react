@@ -11,7 +11,7 @@ import brandwhite from '../assets/brandwhite.png';
 import tailwind from '../assets/tailwind.png';
 import tailwindWhite from '../assets/tailwindwhite.png';
 
-export const Home: FC = (): JSX.Element => {
+export const HomePage: FC = (): JSX.Element => {
 
     const { 
         dataState, darkMode, controlBackground, blueChange,
