@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { DataProvider, ThemeProvider } from './context';
 
 import { Home } from './pages/Home';
-import { StoreEx } from './pages/StoreEx';
+import { Store } from './pages/Store';
 
 import './index.scss';
 
@@ -19,6 +19,6 @@ export const App: FC = (): JSX.Element =>
 
 const Routing: FC = (): JSX.Element =>
   <Routes>
-      <Route path="/store" element={<StoreEx />} />
+      <Route path="/store" element={<Store />} />
       <Route path="/" element={<Home />}/>
   </Routes>;

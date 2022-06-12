@@ -26,7 +26,7 @@ export const Home: FC = (): JSX.Element => {
                     <img src={darkMode ? brandwhite : brand} alt="" className="scale-75 lg:scale-100" />
                     <h3 className="adaptable-center-text text-base lg:text-xl font-semibold mb-4">Happy Hacking! with Typescript?</h3>
                     <p className="adaptable-center-text text-base lg:text-xl font-roboto mb-8">Roboto Font works with</p>
-                    <img src={darkMode ? tailwindWhite : tailwind} alt=""className="scale-50 tall:scale-75 lg:scale-75" />
+                    <img src={darkMode ? tailwindWhite : tailwind} alt="" className="scale-50 tall:scale-75 lg:scale-75" />
                 </div>
                 <div className={`card-container ${controlBackground}`}>
                     {

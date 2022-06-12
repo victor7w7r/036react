@@ -26,7 +26,7 @@ $ git checkout nextjs-blank
 - axios: Promise based HTTP client for the browser
 - rxjs: Reactive Extensions Library for JavaScript
 - sass: For nested and optimized CSS
-- preact/compat: Compatibility Layer for React Packages
+- tailwindcss: Utility-first CSS framework for rapidly building custom user interfaces
 - js-cookie: Store data with cookies
 - swr: React Hooks for Data Fetching by Vercel
 

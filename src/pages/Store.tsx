@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-import { useFormChanger } from '../hooks/useFormChanger';
+import { useStore } from '../hooks';
 
 const inputDesign: string = `block py-2.5 px-0 w-full text-sm text-gray-900 
     bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white 
@@ -13,12 +13,12 @@ const floatingLabelDesign: string = `peer-focus:font-medium absolute text-sm tex
     peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 
     peer-focus:scale-75 peer-focus:-translate-y-6`;
 
-export const StoreEx: FC = (): JSX.Element => {
+export const Store: FC = (): JSX.Element => {
 
     const { 
         handleSubmit, handleChange, changeToHome,
         text, dataState, controlBackground 
-    } = useFormChanger();
+    } = useStore();
 
     return (
         <div className="absolute h-screen inset-0 backdrop-blur-xl">
@@ -44,6 +44,5 @@ export const StoreEx: FC = (): JSX.Element => {
                 <button className="standard-button" onClick={changeToHome}>Go to Home</button>
             </div>
         </div>
-
     );
 };

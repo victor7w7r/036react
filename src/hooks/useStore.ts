@@ -2,7 +2,8 @@ import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router';
 
 import { DataContext, ThemeContext } from '../context';
-export const useFormChanger = () => {
+
+export const useStore = () => {
 
     const navigate = useNavigate();
 
