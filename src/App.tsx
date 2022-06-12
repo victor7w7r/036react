@@ -1,23 +1,24 @@
 import type { FC } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { MainLayout } from './components/layouts/MainLayout';
-import { DataProvider } from './context/DataContext';
+import { DataProvider, ThemeProvider } from './context';
 
 import { Home } from './pages/Home';
 import { StoreEx } from './pages/StoreEx';
 
-import './styles/style.scss';
+import './index.scss';
 
-export const App: FC = (): JSX.Element => (
+export const App: FC = (): JSX.Element => 
   <Router>
     <DataProvider>
-      <MainLayout>
-        <Routes>
-          <Route path="/store" element={<StoreEx />} />
-          <Route path="/" element={<Home />}/>
-        </Routes>
-      </MainLayout>
+      <ThemeProvider>
+          <Routing />
+      </ThemeProvider>
     </DataProvider>
-  </Router>
-);
+  </Router>;
+
+const Routing: FC = (): JSX.Element =>
+  <Routes>
+      <Route path="/store" element={<StoreEx />} />
+      <Route path="/" element={<Home />}/>
+  </Routes>;

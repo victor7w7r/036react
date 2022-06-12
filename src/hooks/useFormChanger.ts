@@ -1,21 +1,27 @@
-import { ChangeEvent, useContext, useState } from 'react';
+import { useContext, useState } from 'react';
+import { useNavigate } from 'react-router';
 
-import { DataContext } from '../context';
-
+import { DataContext, ThemeContext } from '../context';
 export const useFormChanger = () => {
+
+    const navigate = useNavigate();
+
+    const { controlBackground } = useContext(ThemeContext);
 
     const [text, setText] = useState<string>('');
     const {dataState, success} = useContext(DataContext);
 
-    const handleSubmit = (e: ChangeEvent<HTMLFormElement>): void => {
-        e.preventDefault();
-        success(text);
-    };
+    const handleSubmit = (): void => success(text);
 
     const handleChange = (value: string): void => {
         setText(value);
     };
 
-    return { handleSubmit, handleChange, dataState };
+    const changeToHome = (): void => navigate('/');
+
+    return { 
+        handleSubmit, handleChange, changeToHome,
+        text, dataState, controlBackground 
+    };
 
 };

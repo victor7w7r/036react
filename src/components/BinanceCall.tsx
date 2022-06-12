@@ -11,8 +11,8 @@ export const BinanceCall: FC = (): JSX.Element => {
 
     return (
         <>
-            <p className='text-center'>Symbol: {bin?.symbol}</p>
-            <p className='text-center'>Price: {bin?.askPrice}</p>
+            <p className='adaptable-center-text text-base lg:text-lg font-semibold'>Symbol: {bin?.symbol}</p>
+            <p className='adaptable-center-text text-base lg:text-lg font-semibold'>Price: {bin?.askPrice}</p>
         </>
     );
 };
