@@ -7,7 +7,7 @@ const [ binance ] = bind(binanceAll$);
 
 export const BinanceCall: FC = (): JSX.Element => {
 
-    const bin = (binance().find( curr => curr.symbol === 'BTCUSDT' ));
+    const bin = (binance().find( curr => curr.symbol === 'BTCUSDT'));
 
     return (
         <>
