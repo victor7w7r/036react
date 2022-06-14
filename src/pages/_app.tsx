@@ -1,13 +1,15 @@
+import '../styles/globals.css';
+
 import type { AppProps } from 'next/app';
 
-import { DataProvider } from '../context';
-
-import '../styles/style.scss';
+import { DataProvider, ThemeProvider } from '../context';
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <DataProvider>
-      <Component {...pageProps} />
-      </DataProvider>
+      <ThemeProvider>
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </DataProvider>
   );
 }
