@@ -1,6 +1,6 @@
 import { FC, createContext, ReactNode, useState, useEffect } from "react";
 
-import type { TThemeContext } from "../types/TThemeContext";
+import type { TThemeContext } from "../types";
 import { Header } from '../components/Header';
 
 export const ThemeContext = createContext<TThemeContext>( {} as TThemeContext );
