@@ -1,0 +1,12 @@
+{
+  "arrowParens": "avoid",
+  "jsxSingleQuote": true,
+  "quoteProps": "preserve",
+  "plugins": [
+    "prettier-plugin-pkg",
+    "prettier-plugin-sh",
+    "prettier-plugin-tailwindcss"
+  ],
+  "singleQuote": true,
+  "trailingComma": "none"
+}
