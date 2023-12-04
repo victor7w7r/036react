@@ -1,8 +1,8 @@
 import type { FC } from 'react';
-
+import { block } from 'million/react';
 import { useAppSelector } from '@store/index';
 
-export const State: FC = () => {
+export const State: FC = block(() => {
   const count = useAppSelector(state => state.dataSlice.value);
 
   return count.length > 0 ? (
@@ -13,4 +13,4 @@ export const State: FC = () => {
   ) : (
     <p className='adaptable-xl'>Store State: Not yet.</p>
   );
-};
+});
