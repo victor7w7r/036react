@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { mutate } from '@/common/slices/data-slice';
 
-import { useAppDispatch } from '@/common/store';
+import { useAppDispatch } from '@store/index';
 
 export const useStorePage = () => {
   const text = useRef('');

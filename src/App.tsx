@@ -4,7 +4,7 @@ import { RouterProvider } from 'react-router-dom';
 
 import { router } from './router';
 import { ThemeProvider } from '@/common/context/ThemeContext';
-import { store } from '@/common/store';
+import { store } from '@store/index';
 
 import '@/common/styles/global.css';
 

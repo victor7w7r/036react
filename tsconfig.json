@@ -9,6 +9,7 @@
     "noEmit": true,
     "paths": {
       "@/*": ["./src/lib/*"],
+      "@store/*": ["./src/store/*"],
       "@assets/*": ["./src/assets/*"]
     },
     "resolveJsonModule": true,

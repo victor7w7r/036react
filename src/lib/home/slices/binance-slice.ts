@@ -4,17 +4,15 @@ import {
   type PayloadAction
 } from '@reduxjs/toolkit';
 
-import type { RootState } from '@/common/store';
+import type { RootState } from '@store/index';
 import { type Binance, errorBinance } from '../models';
 import { getBitcoin } from '../services';
 
-export type BinanceState = {
+const initialState: {
   loading: boolean;
   data: Binance;
   error: string | undefined;
-};
-
-const initialState: BinanceState = {
+} = {
   loading: false,
   data: errorBinance,
   // eslint-disable-next-line no-undefined

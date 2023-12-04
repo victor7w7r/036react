@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 import { Spinner } from '..';
-import { useAppDispatch, useAppSelector } from '@/common/store';
+import { useAppDispatch, useAppSelector } from '@store/index';
 import { fetchCoins } from '@/home/slices/binance-slice';
 
 export const Call = () => {
