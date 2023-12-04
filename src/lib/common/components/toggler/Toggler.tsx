@@ -1,10 +1,11 @@
 import type { FC } from 'react';
+import { block } from 'million/react';
 
 import { useTheme } from '@/common/hooks';
 
 import './toggler.css';
 
-export const Toggler: FC = () => {
+export const Toggler: FC = block(() => {
   const { isDark, toggle, togglePeer } = useTheme();
 
   return (
@@ -28,4 +29,4 @@ export const Toggler: FC = () => {
       </div>
     </div>
   );
-};
+});

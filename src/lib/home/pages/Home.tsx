@@ -1,4 +1,5 @@
 import type { FC } from 'react';
+import { block } from 'million/react';
 import { useNavigate } from 'react-router-dom';
 
 import { State } from '@/common/components';
@@ -12,7 +13,7 @@ import tailwindwhite from '@assets/img/tailwindwhite.png';
 
 import '../styles/Home.css';
 
-export const Home: FC = () => {
+export const Home: FC = block(() => {
   const {
     control,
     isDark,
@@ -93,4 +94,4 @@ export const Home: FC = () => {
       </div>
     </div>
   );
-};
+});

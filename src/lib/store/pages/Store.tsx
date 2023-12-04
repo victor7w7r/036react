@@ -1,4 +1,5 @@
 import type { FC } from 'react';
+import { block } from 'million/react';
 
 import { useTheme } from '@/common/hooks';
 import { State } from '@/common/components';
@@ -6,7 +7,7 @@ import { useStorePage } from '../hooks';
 
 import '../styles/Store.css';
 
-export const Store: FC = () => {
+export const Store: FC = block(() => {
   const { control } = useTheme();
 
   const { handleChange, handleSubmit, changeToHome } = useStorePage();
@@ -51,4 +52,4 @@ export const Store: FC = () => {
       </div>
     </div>
   );
-};
+});

@@ -1,4 +1,5 @@
 import type { FC } from 'react';
+import { block } from 'million/react';
 
 import { useTheme } from '@/common/hooks';
 import { Link } from 'react-router-dom';
@@ -7,7 +8,7 @@ import { Toggler } from '../toggler/Toggler';
 
 import './Header.css';
 
-export const Header: FC = () => {
+export const Header: FC = block(() => {
   const { control } = useTheme();
 
   return (
@@ -31,4 +32,4 @@ export const Header: FC = () => {
       </nav>
     </div>
   );
-};
+});
