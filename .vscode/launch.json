@@ -2,12 +2,10 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "node",
-      "name": "dev.debug",
+      "command": "./node_modules/.bin/vite dev",
+      "name": "Development server",
       "request": "launch",
-      "skipFiles": ["<node_internals>/**"],
-      "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/vite/bin/vite.js"
+      "type": "node-terminal"
     }
   ]
 }
