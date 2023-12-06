@@ -10,9 +10,7 @@ export const useStorePage = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
-  const handleSubmit = (): void => {
-    dispatch(mutate(text.current));
-  };
+  const handleSubmit = () => dispatch(mutate(text.current));
 
   const handleChange = (event: ChangeEvent): string =>
     (text.current = (event.target as HTMLInputElement).value);
