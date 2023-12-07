@@ -1,10 +1,11 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import { Layout } from '@/common/layout/Layout';
-
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <Layout />
+    async lazy() {
+      const { Layout } = await import('@/common/layout');
+      return { Component: Layout };
+    }
   }
 ]);
