@@ -4,7 +4,7 @@ import {
   type PayloadAction
 } from '@reduxjs/toolkit';
 
-import type { RootState } from '@store/index';
+import type { RootState } from '../../../core/modules/store-module';
 import { type Binance, errorBinance } from '../models';
 import { getBitcoin } from '../services';
 

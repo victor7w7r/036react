@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import { block } from 'million/react';
-import { useAppSelector } from '@store/index';
+
+import { useAppSelector } from '@core/modules';
 
 export const State: FC = block(() => {
   const count = useAppSelector(state => state.dataSlice.value);

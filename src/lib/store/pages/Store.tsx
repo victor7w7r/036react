@@ -3,9 +3,9 @@ import { block } from 'million/react';
 
 import { useTheme } from '@/common/hooks';
 import { State } from '@/common/components';
-import { useStorePage } from '../hooks';
+import { useStorePage } from '@/store/hooks';
 
-import '../styles/Store.css';
+import '@/store/styles/Store.css';
 
 export const Store: FC = block(() => {
   const { control } = useTheme();

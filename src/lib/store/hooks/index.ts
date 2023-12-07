@@ -2,8 +2,7 @@ import { type ChangeEvent, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { mutate } from '@/common/slices/data-slice';
-
-import { useAppDispatch } from '@store/index';
+import { useAppDispatch } from '@core/modules';
 
 export const useStorePage = () => {
   const text = useRef('');

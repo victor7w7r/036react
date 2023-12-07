@@ -1,4 +1,4 @@
-import { axiosClient, timeout } from '../../../config';
+import { axiosClient, timeout } from '@core/modules';
 import { errorBinance, type Binance } from '@/home/models';
 
 export const getBitcoin = async (): Promise<Binance> => {

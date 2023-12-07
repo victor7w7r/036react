@@ -2,11 +2,11 @@ import type { FC } from 'react';
 import { Provider } from 'react-redux';
 import { RouterProvider } from 'react-router-dom';
 
-import { router } from './router';
-import { ThemeProvider } from '@/common/context/ThemeContext';
-import { store } from '@store/index';
+import { router } from './core/router';
+import { store } from './core/modules/store-module';
+import { ThemeProvider } from '@/common/context';
 
-import '@/common/styles/global.css';
+import '@core/styles/global.css';
 
 export const App: FC = () => (
   <Provider store={store}>
