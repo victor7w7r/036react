@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react-swc';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
-  plugins: [million.vite({ auto: true }), react(), tsconfigPaths()]
+  plugins: [million.vite({ auto: true, mute: true }), react(), tsconfigPaths()]
 });

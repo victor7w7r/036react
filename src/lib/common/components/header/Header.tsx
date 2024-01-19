@@ -1,8 +1,8 @@
 import type { FC } from 'react';
 import { block } from 'million/react';
+import { Link } from 'react-router-dom';
 
 import { useTheme } from '@/common/hooks';
-import { Link } from 'react-router-dom';
 
 import { Toggler } from '../toggler/Toggler';
 
