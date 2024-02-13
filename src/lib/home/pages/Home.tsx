@@ -11,7 +11,7 @@ import brandwhite from '@assets/img/brandwhite.png'
 import tailwind from '@assets/img/tailwind.png'
 import tailwindwhite from '@assets/img/tailwindwhite.png'
 
-import '../styles/Home.css'
+import '../styles/home.css'
 
 export const Home: FC = block(() => {
   const {

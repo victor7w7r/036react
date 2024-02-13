@@ -11,7 +11,7 @@ export const useStorePage = () => {
 
   const handleSubmit = () => dispatch(mutate(text.current))
 
-  const handleChange = (event: ChangeEvent): string =>
+  const handleChange = (event: ChangeEvent) =>
     (text.current = (event.target as HTMLInputElement).value)
 
   const changeToHome = () => navigate('/')

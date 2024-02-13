@@ -29,7 +29,7 @@ export const Spinner: FC = block(() => (
   <div className='flex flex-row justify-center'>
     <svg
       role='status'
-      className='mr-2 h-8 w-8 animate-spin fill-white text-gray-400/50'
+      className='mr-2 size-8 animate-spin fill-white text-gray-400/50'
       viewBox='0 0 100 101'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'

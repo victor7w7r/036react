@@ -5,7 +5,7 @@ import { useTheme } from '@/common/hooks'
 import { State } from '@/common/components'
 import { useStorePage } from '@/store/hooks'
 
-import '@/store/styles/Store.css'
+import '@/store/styles/store.css'
 
 export const Store: FC = block(() => {
   const { control } = useTheme()

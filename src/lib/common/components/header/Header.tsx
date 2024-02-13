@@ -6,7 +6,7 @@ import { useTheme } from '@/common/hooks'
 
 import { Toggler } from '../toggler/Toggler'
 
-import './Header.css'
+import './header.css'
 
 export const Header: FC = block(() => {
   const { control } = useTheme()

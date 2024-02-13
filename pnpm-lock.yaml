@@ -11,6 +11,9 @@ dependencies:
   axios:
     specifier: ^1.6.7
     version: 1.6.7
+  fp-ts:
+    specifier: ^2.16.2
+    version: 2.16.2
   million:
     specifier: ^3.0.3
     version: 3.0.3
@@ -26,6 +29,9 @@ dependencies:
   react-router-dom:
     specifier: ^6.22.0
     version: 6.22.0(react-dom@18.2.0)(react@18.2.0)
+  scope-extensions-js:
+    specifier: ^1.1.0
+    version: 1.1.0
 
 devDependencies:
   '@types/eslint':
@@ -1938,6 +1944,10 @@ packages:
       mime-types: 2.1.35
     dev: false
 
+  /fp-ts@2.16.2:
+    resolution: {integrity: sha512-CkqAjnIKFqvo3sCyoBTqgJvF+bHrSik584S9nhTjtBESLx26cbtVMR/T9a6ApChOcSDAaM3JydDmWDUn4EEXng==}
+    dev: false
+
   /fraction.js@4.3.7:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
     dev: true
@@ -3174,6 +3184,10 @@ packages:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
       loose-envify: 1.4.0
+    dev: false
+
+  /scope-extensions-js@1.1.0:
+    resolution: {integrity: sha512-SbxLXgaw2R04te1dfviB0HHzD2dPcOQh/CFSn0JiJ9EHTFCqA0rOOMfIwqi/oN2cQlaiWR/zQLCwSCtJ0bYF5Q==}
     dev: false
 
   /semver@6.3.1:

@@ -6,7 +6,7 @@ import { darkTheme, whiteTheme } from '../models'
 export const useTheme = () => {
   const context = useContext(ThemeContext)
 
-  const toggle = (): void => {
+  const toggle = () => {
     context.theme.isDark
       ? context.setTheme({
           ...context.theme,
@@ -26,7 +26,7 @@ export const useTheme = () => {
     document.body.classList.toggle('dark')
   }
 
-  const changeSelector = (selector: string): void =>
+  const changeSelector = (selector: string) =>
     context.theme.isDark
       ? context.setTheme({
           ...context.theme,
@@ -41,13 +41,13 @@ export const useTheme = () => {
           togglePeer: `peer-checked:bg-${selector}-300`
         })
 
-  const changeBlue = (): void => changeSelector('sky')
+  const changeBlue = () => changeSelector('sky')
 
-  const changePurple = (): void => changeSelector('purple')
+  const changePurple = () => changeSelector('purple')
 
-  const changeRed = (): void => changeSelector('red')
+  const changeRed = () => changeSelector('red')
 
-  const changeEmerald = (): void => changeSelector('emerald')
+  const changeEmerald = () => changeSelector('emerald')
 
   return {
     isDark: context.theme.isDark,
