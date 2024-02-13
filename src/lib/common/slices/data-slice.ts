@@ -1,4 +1,4 @@
-import { type PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { type PayloadAction, createSlice } from '@reduxjs/toolkit'
 
 export const dataSlice = createSlice({
   name: 'data',
@@ -7,11 +7,11 @@ export const dataSlice = createSlice({
   },
   reducers: {
     mutate: (state, action: PayloadAction<string>) => {
-      state.value = action.payload;
+      state.value = action.payload
     }
   }
-});
+})
 
-export const { mutate } = dataSlice.actions;
+export const { mutate } = dataSlice.actions
 
-export default dataSlice.reducer;
+export default dataSlice.reducer

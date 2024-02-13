@@ -1,17 +1,17 @@
-import type { FC } from 'react';
-import { block } from 'million/react';
-import { useNavigate } from 'react-router-dom';
+import type { FC } from 'react'
+import { block } from 'million/react'
+import { useNavigate } from 'react-router-dom'
 
-import { State } from '@/common/components';
-import { useTheme } from '@/common/hooks';
-import { Call } from '@/home/components';
+import { State } from '@/common/components'
+import { useTheme } from '@/common/hooks'
+import { Call } from '@/home/components'
 
-import brand from '@assets/img/brand.png';
-import brandwhite from '@assets/img/brandwhite.png';
-import tailwind from '@assets/img/tailwind.png';
-import tailwindwhite from '@assets/img/tailwindwhite.png';
+import brand from '@assets/img/brand.png'
+import brandwhite from '@assets/img/brandwhite.png'
+import tailwind from '@assets/img/tailwind.png'
+import tailwindwhite from '@assets/img/tailwindwhite.png'
 
-import '../styles/Home.css';
+import '../styles/Home.css'
 
 export const Home: FC = block(() => {
   const {
@@ -21,9 +21,9 @@ export const Home: FC = block(() => {
     changePurple,
     changeRed,
     changeEmerald
-  } = useTheme();
+  } = useTheme()
 
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   return (
     <div className='page-container'>
@@ -93,5 +93,5 @@ export const Home: FC = block(() => {
         </div>
       </div>
     </div>
-  );
-});
+  )
+})

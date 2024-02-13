@@ -1,12 +1,12 @@
-import type { FC } from 'react';
-import { block } from 'million/react';
+import type { FC } from 'react'
+import { block } from 'million/react'
 
-import { useTheme } from '@/common/hooks';
+import { useTheme } from '@/common/hooks'
 
-import './toggler.css';
+import './toggler.css'
 
 export const Toggler: FC = block(() => {
-  const { isDark, toggle, togglePeer } = useTheme();
+  const { isDark, toggle, togglePeer } = useTheme()
 
   return (
     <div className='relative'>
@@ -28,5 +28,5 @@ export const Toggler: FC = block(() => {
         </label>
       </div>
     </div>
-  );
-});
+  )
+})

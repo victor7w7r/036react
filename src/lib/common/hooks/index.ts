@@ -1,10 +1,10 @@
-import { useContext } from 'react';
+import { useContext } from 'react'
 
-import { ThemeContext } from '../context';
-import { darkTheme, whiteTheme } from '../models';
+import { ThemeContext } from '../context'
+import { darkTheme, whiteTheme } from '../models'
 
 export const useTheme = () => {
-  const context = useContext(ThemeContext);
+  const context = useContext(ThemeContext)
 
   const toggle = (): void => {
     context.theme.isDark
@@ -21,10 +21,10 @@ export const useTheme = () => {
           dark: darkTheme.dark,
           control: whiteTheme.control,
           togglePeer: darkTheme.togglePeer
-        });
+        })
 
-    document.body.classList.toggle('dark');
-  };
+    document.body.classList.toggle('dark')
+  }
 
   const changeSelector = (selector: string): void =>
     context.theme.isDark
@@ -39,15 +39,15 @@ export const useTheme = () => {
           white: `bg-${selector}-300`,
           control: `bg-${selector}-700/30`,
           togglePeer: `peer-checked:bg-${selector}-300`
-        });
+        })
 
-  const changeBlue = (): void => changeSelector('sky');
+  const changeBlue = (): void => changeSelector('sky')
 
-  const changePurple = (): void => changeSelector('purple');
+  const changePurple = (): void => changeSelector('purple')
 
-  const changeRed = (): void => changeSelector('red');
+  const changeRed = (): void => changeSelector('red')
 
-  const changeEmerald = (): void => changeSelector('emerald');
+  const changeEmerald = (): void => changeSelector('emerald')
 
   return {
     isDark: context.theme.isDark,
@@ -60,5 +60,5 @@ export const useTheme = () => {
     changePurple,
     changeRed,
     changeEmerald
-  };
-};
+  }
+}

@@ -4,21 +4,21 @@ import {
   createContext,
   useEffect,
   useState
-} from 'react';
+} from 'react'
 
-import { type AppTheme, whiteTheme } from '../models';
+import { type AppTheme, whiteTheme } from '../models'
 
 export const ThemeContext = createContext<{
-  theme: AppTheme;
-  setTheme: (theme: AppTheme) => void;
+  theme: AppTheme
+  setTheme: (theme: AppTheme) => void
 }>({
   theme: whiteTheme,
   // eslint-disable-next-line @typescript-eslint/no-empty-function, no-empty-function
   setTheme: () => {}
-});
+})
 
 export const ThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
-  const [theme, setTheme] = useState<AppTheme>(whiteTheme);
+  const [theme, setTheme] = useState<AppTheme>(whiteTheme)
 
   useEffect(
     () =>
@@ -27,7 +27,7 @@ export const ThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
         isDark: document.body.classList.contains('dark')
       })),
     []
-  );
+  )
 
   return (
     <ThemeContext.Provider
@@ -43,5 +43,5 @@ export const ThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
         {children}
       </div>
     </ThemeContext.Provider>
-  );
-};
+  )
+}

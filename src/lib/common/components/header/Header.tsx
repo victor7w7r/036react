@@ -1,15 +1,15 @@
-import type { FC } from 'react';
-import { block } from 'million/react';
-import { Link } from 'react-router-dom';
+import type { FC } from 'react'
+import { block } from 'million/react'
+import { Link } from 'react-router-dom'
 
-import { useTheme } from '@/common/hooks';
+import { useTheme } from '@/common/hooks'
 
-import { Toggler } from '../toggler/Toggler';
+import { Toggler } from '../toggler/Toggler'
 
-import './Header.css';
+import './Header.css'
 
 export const Header: FC = block(() => {
-  const { control } = useTheme();
+  const { control } = useTheme()
 
   return (
     <div className='flex items-center justify-center'>
@@ -31,5 +31,5 @@ export const Header: FC = block(() => {
         </div>
       </nav>
     </div>
-  );
-});
+  )
+})

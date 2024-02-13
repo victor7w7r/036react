@@ -1,5 +1,5 @@
-import type { FC } from 'react';
-import { block } from 'million/react';
+import type { FC } from 'react'
+import { block } from 'million/react'
 
 const SVGPathOne = `
   M100 50.5908C100 78.2051 77.6142 100.591 50
@@ -9,7 +9,7 @@ const SVGPathOne = `
   91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186
   27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921
   9.08144 50.5908Z
-`;
+`
 
 const SVGPathTwo = `
   M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079
@@ -23,7 +23,7 @@ const SVGPathTwo = `
   79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913
   88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676
   39.0409Z
-`;
+`
 
 export const Spinner: FC = block(() => (
   <div className='flex flex-row justify-center'>
@@ -38,4 +38,4 @@ export const Spinner: FC = block(() => (
       <path d={SVGPathTwo} fill='currentFill' />
     </svg>
   </div>
-));
+))

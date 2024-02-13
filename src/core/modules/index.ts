@@ -1,2 +1,2 @@
-export * from './axios-module';
-export * from './store-module';
+export * from './axios-module'
+export * from './store-module'

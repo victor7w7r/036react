@@ -1,2 +1,2 @@
-export * from './call/Call';
-export * from './spinner/Spinner';
+export * from './call/Call'
+export * from './spinner/Spinner'

@@ -1,17 +1,17 @@
-import { type FC, useEffect } from 'react';
-import { block } from 'million/react';
+import { type FC, useEffect } from 'react'
+import { block } from 'million/react'
 
-import { Spinner } from '..';
-import { useAppDispatch, useAppSelector } from '@core/modules';
-import { fetchCoins } from '@/home/slices/binance-slice';
+import { Spinner } from '..'
+import { useAppDispatch, useAppSelector } from '@core/modules'
+import { fetchCoins } from '@/home/slices/binance-slice'
 
 export const Call: FC = block(() => {
-  const state = useAppSelector(state => state.binanceSlice);
-  const dispatch = useAppDispatch();
+  const state = useAppSelector(state => state.binanceSlice)
+  const dispatch = useAppDispatch()
 
   useEffect(() => {
-    void dispatch(fetchCoins());
-  }, [dispatch]);
+    void dispatch(fetchCoins())
+  }, [dispatch])
 
   return state.loading ? (
     <Spinner />
@@ -26,5 +26,5 @@ export const Call: FC = block(() => {
         {state.data.askPrice}
       </p>
     </>
-  );
-});
+  )
+})

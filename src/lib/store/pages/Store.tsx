@@ -1,16 +1,16 @@
-import type { FC } from 'react';
-import { block } from 'million/react';
+import type { FC } from 'react'
+import { block } from 'million/react'
 
-import { useTheme } from '@/common/hooks';
-import { State } from '@/common/components';
-import { useStorePage } from '@/store/hooks';
+import { useTheme } from '@/common/hooks'
+import { State } from '@/common/components'
+import { useStorePage } from '@/store/hooks'
 
-import '@/store/styles/Store.css';
+import '@/store/styles/Store.css'
 
 export const Store: FC = block(() => {
-  const { control } = useTheme();
+  const { control } = useTheme()
 
-  const { handleChange, handleSubmit, changeToHome } = useStorePage();
+  const { handleChange, handleSubmit, changeToHome } = useStorePage()
 
   return (
     <div className='page-container'>
@@ -51,5 +51,5 @@ export const Store: FC = block(() => {
         </div>
       </div>
     </div>
-  );
-});
+  )
+})
