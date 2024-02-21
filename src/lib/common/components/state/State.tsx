@@ -1,9 +1,8 @@
-import type { FC } from 'react'
 import { block } from 'million/react'
 
 import { useAppSelector } from '@core/modules'
 
-export const State: FC = block(() => {
+export const State = block(() => {
   const count = useAppSelector(state => state.dataSlice.value)
 
   return count.length > 0 ? (

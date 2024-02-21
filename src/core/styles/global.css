@@ -48,11 +48,6 @@
   dark:bg-white/50;
 }
 
-.page-container {
-  @apply absolute inset-0 m-auto flex
-  h-[70%] justify-center backdrop-blur-xl;
-}
-
 .toggle-title {
   @apply adaptable-text ml-3 select-none
   text-sm font-medium;

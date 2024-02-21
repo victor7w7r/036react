@@ -1,11 +1,11 @@
-import { type FC, useEffect } from 'react'
+import { useEffect } from 'react'
 import { block } from 'million/react'
 
 import { Spinner } from '..'
 import { useAppDispatch, useAppSelector } from '@core/modules'
 import { fetchCoins } from '@/home/slices/binance-slice'
 
-export const Call: FC = block(() => {
+export const Call = block(() => {
   const state = useAppSelector(state => state.binanceSlice)
   const dispatch = useAppDispatch()
 

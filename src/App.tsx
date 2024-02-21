@@ -1,4 +1,3 @@
-import type { FC } from 'react'
 import { Provider } from 'react-redux'
 import { RouterProvider } from 'react-router-dom'
 
@@ -8,7 +7,7 @@ import { ThemeProvider } from '@/common/context'
 
 import '@core/styles/global.css'
 
-export const App: FC = () => (
+export const App = () => (
   <Provider store={store}>
     <ThemeProvider>
       <RouterProvider router={router} />

@@ -1,4 +1,3 @@
-import type { FC } from 'react'
 import { block } from 'million/react'
 
 const SVGPathOne = `
@@ -25,17 +24,15 @@ const SVGPathTwo = `
   39.0409Z
 `
 
-export const Spinner: FC = block(() => (
-  <div className='flex flex-row justify-center'>
-    <svg
-      role='status'
-      className='mr-2 size-8 animate-spin fill-white text-gray-400/50'
-      viewBox='0 0 100 101'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
-    >
-      <path d={SVGPathOne} fill='currentColor' />
-      <path d={SVGPathTwo} fill='currentFill' />
-    </svg>
-  </div>
+export const Spinner = block(() => (
+  <svg
+    role='status'
+    className='mr-2 size-8 animate-spin fill-white text-gray-400/50'
+    viewBox='0 0 100 101'
+    fill='none'
+    xmlns='http://www.w3.org/2000/svg'
+  >
+    <path d={SVGPathOne} fill='currentColor' />
+    <path d={SVGPathTwo} fill='currentFill' />
+  </svg>
 ))
