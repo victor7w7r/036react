@@ -11,21 +11,21 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^2.2.0",
+    "@reduxjs/toolkit": "^2.2.1",
     "axios": "^1.6.7",
     "fp-ts": "^2.16.2",
     "million": "^3.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^9.1.0",
-    "react-router-dom": "^6.22.0"
+    "react-router-dom": "^6.22.1"
   },
   "devDependencies": {
     "@types/eslint": "^8.56.2",
-    "@types/react": "^18.2.55",
+    "@types/react": "^18.2.57",
     "@types/react-dom": "^18.2.19",
-    "@typescript-eslint/eslint-plugin": "^7.0.1",
-    "@typescript-eslint/parser": "^7.0.1",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
     "@vitejs/plugin-react-swc": "^3.6.0",
     "autoprefixer": "^10.4.17",
     "eslint": "^8.56.0",
@@ -34,14 +34,14 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
-    "eslint-plugin-tailwindcss": "^3.14.2",
+    "eslint-plugin-tailwindcss": "^3.14.3",
     "postcss": "^8.4.35",
     "prettier": "^3.2.5",
     "prettier-plugin-pkg": "^0.18.1",
     "prettier-plugin-sh": "^0.14.0",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "typescript": "^5.3.3",
-    "vite": "^5.1.1",
+    "vite": "^5.1.4",
     "vite-tsconfig-paths": "^4.3.1"
   }
 }
