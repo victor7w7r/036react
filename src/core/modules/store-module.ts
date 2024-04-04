@@ -5,15 +5,10 @@ import {
   useSelector
 } from 'react-redux'
 
-import dataSlice from '@/common/slices/data-slice'
-import binanceSlice from '@/home/slices/binance-slice'
+import dataSlice from '@/common/ui/slices/data-slice'
+import binanceSlice from '@/home/ui/slices/binance-slice'
 
-export const store = configureStore({
-  reducer: {
-    binanceSlice,
-    dataSlice
-  }
-})
+export const store = configureStore({ reducer: { binanceSlice, dataSlice } })
 
 export type RootState = ReturnType<typeof store.getState>
 
