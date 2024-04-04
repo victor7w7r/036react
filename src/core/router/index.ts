@@ -1,3 +1,4 @@
+/* eslint-disable perfectionist/sort-objects */
 import { createBrowserRouter } from 'react-router-dom'
 
 import { homeRouter } from '@/home/router'

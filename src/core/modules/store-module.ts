@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
 import {
-  useSelector,
   type TypedUseSelectorHook,
-  useDispatch
+  useDispatch,
+  useSelector
 } from 'react-redux'
 
 import dataSlice from '@/common/slices/data-slice'
@@ -10,8 +10,8 @@ import binanceSlice from '@/home/slices/binance-slice'
 
 export const store = configureStore({
   reducer: {
-    dataSlice,
-    binanceSlice
+    binanceSlice,
+    dataSlice
   }
 })
 

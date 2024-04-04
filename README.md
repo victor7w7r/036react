@@ -1,6 +1,6 @@
 # 036react
 
-A very simple template for React with essential packages and strict TypeScript
+A clean architecture template for React with useful packages and strict TypeScript
 
 ## Why Typescript?
 

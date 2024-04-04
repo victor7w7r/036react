@@ -1,11 +1,12 @@
+import '~/styles/global.css'
+
 import { Provider } from 'react-redux'
 import { RouterProvider } from 'react-router-dom'
 
-import { router } from './core/router'
-import { store } from './core/modules/store-module'
 import { ThemeProvider } from '@/common/context'
 
-import '@core/styles/global.css'
+import { store } from './core/modules/store-module'
+import { router } from './core/router'
 
 export const App = () => (
   <Provider store={store}>

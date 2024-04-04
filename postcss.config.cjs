@@ -1,6 +1,7 @@
+// eslint-disable-next-line toplevel/no-toplevel-side-effect
 module.exports = {
   plugins: {
-    tailwindcss: {},
-    autoprefixer: {}
+    autoprefixer: {},
+    tailwindcss: {}
   }
 }
