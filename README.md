@@ -1,19 +1,20 @@
 # 036react
 
-A very simple template for React with essential packages and strict TypeScript
+A clean architecture template for React with useful packages and strict TypeScript
 
 ## Why Typescript?
 
 Is the best programming language for web. Made with ❤️ by
 
-![Alt text](src/assets/img/brandwhite.png?raw=true 'Title')
+![Alt text](src/core/assets/brandwhite.png?raw=true 'Title')
 
 ## Extra Packages
 
 - axios: Promise based HTTP client for the browser and node.js
+- awilix: Dependency injection for JavaScript and Node.js apps
+- million.js: Make React 70% faster
 - redux: Predictable state container for JavaScript apps
 - react-redux: Official React bindings for Redux
-- million.js: Make React 70% faster
 - tailwindcss: Utility-first CSS framework for rapidly building custom user interfaces
 
 ### Change to blank template

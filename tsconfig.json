@@ -8,9 +8,8 @@
     "moduleResolution": "bundler",
     "noEmit": true,
     "paths": {
-      "@/*": ["./src/lib/*"],
-      "@assets/*": ["./src/assets/*"],
-      "@core/*": ["./src/core/*"]
+      "@/*": ["./src/features/*"],
+      "~/*": ["./src/core/*"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,
