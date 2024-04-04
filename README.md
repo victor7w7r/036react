@@ -11,9 +11,10 @@ Is the best programming language for web. Made with ❤️ by
 ## Extra Packages
 
 - axios: Promise based HTTP client for the browser and node.js
+- awilix: Dependency injection for JavaScript and Node.js apps
+- million.js: Make React 70% faster
 - redux: Predictable state container for JavaScript apps
 - react-redux: Official React bindings for Redux
-- million.js: Make React 70% faster
 - tailwindcss: Utility-first CSS framework for rapidly building custom user interfaces
 
 ### Change to blank template
