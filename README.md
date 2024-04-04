@@ -6,7 +6,7 @@ A clean architecture template for React with useful packages and strict TypeScri
 
 Is the best programming language for web. Made with ❤️ by
 
-![Alt text](src/assets/img/brandwhite.png?raw=true 'Title')
+![Alt text](src/core/assets/brandwhite.png?raw=true 'Title')
 
 ## Extra Packages
 
