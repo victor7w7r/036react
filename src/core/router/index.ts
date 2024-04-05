@@ -5,7 +5,7 @@ export const router = createBrowserRouter([
   {
     path: '/',
     async lazy() {
-      const { Layout } = await import('../../features/common/layout')
+      const { Layout } = await import('../../features/common/ui/layout')
       return { Component: Layout }
     }
   }

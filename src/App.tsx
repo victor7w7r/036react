@@ -1,5 +1,3 @@
-import '@/common/styles/global.css'
-
 import type { FC } from 'react'
 import { RouterProvider } from 'react-router-dom'
 
