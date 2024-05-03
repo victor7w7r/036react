@@ -29,6 +29,6 @@ $ git checkout blank
 
 ```bash
 $ cd 036react
-$ pnpm i   #Install Packages
-$ pnpm dev #Run develop
+$ bun install #Install Packages
+$ bun run dev #Run develop
 ```
