@@ -11,6 +11,7 @@ tsconfig.tsbuildinfo
 logs
 tsconfig.node.tsbuildinfo
 vite.config.d.ts
+coverage
 vite.config.js
 *.log
 npm-debug.log*

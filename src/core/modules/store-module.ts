@@ -12,5 +12,6 @@ export const store = configureStore({ reducer: { binanceSlice, dataSlice } })
 
 export type RootState = ReturnType<typeof store.getState>
 
+// eslint-disable-next-line functional/prefer-tacit
 export const useAppDispatch = () => useDispatch<typeof store.dispatch>()
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector

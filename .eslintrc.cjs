@@ -1,11 +1,12 @@
 /** @type {import("eslint").Linter.Config} */
-// eslint-disable-next-line toplevel/no-toplevel-side-effect, import/no-commonjs
+// eslint-disable-next-line import/no-commonjs, toplevel/no-toplevel-side-effect
 module.exports = {
   env: {
     browser: true,
     es2021: true
   },
   extends: [
+    './.eslintrc-auto-import.json',
     'prettier',
     'eslint:recommended',
     'plugin:@typescript-eslint/strict-type-checked',
@@ -19,9 +20,64 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
     'plugin:security/recommended-legacy',
-    'plugin:sonarjs/recommended',
+    'plugin:sonarjs/recommended-legacy',
     'plugin:tailwindcss/recommended',
-    'plugin:unicorn/recommended'
+    'plugin:unicorn/recommended',
+    'plugin:vitest/legacy-recommended'
+  ],
+  'overrides': [
+    {
+      'files': ['test/**/*.spec.ts', 'test/**/*.spec.tsx', '**/*.d.ts'],
+      'rules': {
+        '@typescript-eslint/ban-ts-comment': 'off',
+        '@typescript-eslint/consistent-type-imports': 'off',
+        '@typescript-eslint/init-declarations': 'off',
+        '@typescript-eslint/no-empty-function': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/no-extraneous-class': 'off',
+        '@typescript-eslint/no-magic-numbers': 'off',
+        '@typescript-eslint/no-unsafe-assignment': 'off',
+        '@typescript-eslint/no-unsafe-call': 'off',
+        '@typescript-eslint/no-unsafe-member-access': 'off',
+        '@typescript-eslint/restrict-template-expressions': 'off',
+        '@typescript-eslint/unbound-method': 'off',
+        'functional/no-classes': 'off',
+        'no-magic-numbers': 'off',
+        'security/detect-object-injection': 'off',
+        'sonarjs/no-duplicate-string': 'off',
+        'toplevel/no-toplevel-side-effect': 'off',
+        'unicorn/consistent-function-scoping': 'off',
+        'unicorn/no-abusive-eslint-disable': 'off',
+        'unicorn/no-useless-undefined': 'off',
+        'vitest/consistent-test-it': 'warn',
+        'vitest/no-alias-methods': 'warn',
+        'vitest/no-conditional-expect': 'warn',
+        'vitest/no-conditional-tests': 'warn',
+        'vitest/no-duplicate-hooks': 'warn',
+        'vitest/no-focused-tests': 'warn',
+        'vitest/no-standalone-expect': 'warn',
+        'vitest/no-test-return-statement': 'warn',
+        'vitest/prefer-comparison-matcher': 'warn',
+        'vitest/prefer-each': 'warn',
+        'vitest/prefer-equality-matcher': 'warn',
+        'vitest/prefer-expect-assertions': 'warn',
+        'vitest/prefer-expect-resolves': 'warn',
+        'vitest/prefer-hooks-in-order': 'warn',
+        'vitest/prefer-hooks-on-top': 'warn',
+        'vitest/prefer-lowercase-title': 'warn',
+        'vitest/prefer-mock-promise-shorthand': 'warn',
+        'vitest/prefer-spy-on': 'warn',
+        'vitest/prefer-strict-equal': 'warn',
+        'vitest/prefer-to-be': 'warn',
+        'vitest/prefer-to-be-object': 'warn',
+        'vitest/prefer-to-be-truthy': 'warn',
+        'vitest/prefer-to-contain': 'warn',
+        'vitest/prefer-to-have-length': 'warn',
+        'vitest/prefer-todo': 'warn',
+        'vitest/require-hook': 'warn',
+        'vitest/require-top-level-describe': 'warn'
+      }
+    }
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {

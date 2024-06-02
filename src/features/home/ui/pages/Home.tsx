@@ -1,16 +1,12 @@
 import '../styles/home.css'
 
+import { State } from '@/common/ui/components'
+import { useTheme } from '@/common/ui/hooks'
+import { Call } from '@/home/ui/components'
 import brand from '~/assets/brand.png'
 import brandwhite from '~/assets/brandwhite.png'
 import tailwind from '~/assets/tailwind.png'
 import tailwindwhite from '~/assets/tailwindwhite.png'
-import { block } from 'million/react'
-import type { FC } from 'react'
-import { useNavigate } from 'react-router-dom'
-
-import { State } from '@/common/ui/components'
-import { useTheme } from '@/common/ui/hooks'
-import { Call } from '@/home/ui/components'
 
 export const Home: FC = block(() => {
   const {

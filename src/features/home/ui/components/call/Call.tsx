@@ -1,6 +1,3 @@
-import { block } from 'million/react'
-import { useEffect } from 'react'
-
 import { Spinner } from '@/home/ui/components'
 import { fetchCoins } from '@/home/ui/slices/binance-slice'
 import { useAppDispatch, useAppSelector } from '~/modules'

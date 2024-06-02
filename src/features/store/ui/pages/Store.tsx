@@ -1,8 +1,6 @@
 import '@/store/ui/styles/store.css'
 
-import { block } from 'million/react'
-import { type ChangeEvent, useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
+import type { ChangeEvent } from 'react'
 
 import { State } from '@/common/ui/components'
 import { useTheme } from '@/common/ui/hooks'

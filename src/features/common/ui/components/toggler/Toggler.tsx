@@ -1,7 +1,5 @@
 import './toggler.css'
 
-import { block } from 'million/react'
-
 import { useTheme } from '@/common/ui/hooks'
 
 export const Toggler = block(() => {

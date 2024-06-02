@@ -1,5 +1,3 @@
-import { block } from 'million/react'
-
 import { useAppSelector } from '~/modules'
 
 export const State = block(() => {

@@ -1,5 +1,3 @@
-import axios, { type AxiosInstance } from 'axios'
-
 export type AxiosModule = Readonly<{ client: AxiosInstance }>
 
 export const timeout = 5000

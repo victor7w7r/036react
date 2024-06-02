@@ -1,10 +1,4 @@
-import {
-  createContext,
-  type FC,
-  type ReactNode,
-  useEffect,
-  useState
-} from 'react'
+import type { FC } from 'react'
 
 import { type AppTheme, whiteTheme } from '../../../../core/theme/app-theme'
 

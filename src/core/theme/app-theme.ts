@@ -10,6 +10,7 @@ const stdElements: CommonElements = {
   white: 'bg-white'
 }
 
+// eslint-disable-next-line perfectionist/sort-intersection-types
 export type AppTheme = CommonElements & {
   isDark: boolean
   togglePeer: string

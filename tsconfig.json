@@ -17,6 +17,6 @@
     "useDefineForClassFields": true
   },
   "extends": "./tsconfig.app.json",
-  "include": ["src"],
+  "include": ["src", "test", "auto-import.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

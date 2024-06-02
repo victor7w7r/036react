@@ -1,5 +1,3 @@
-import { useContext } from 'react'
-
 import { darkTheme, whiteTheme } from '~/theme/app-theme'
 
 import { ThemeContext } from '../context'

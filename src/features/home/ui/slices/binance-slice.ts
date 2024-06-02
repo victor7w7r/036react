@@ -5,7 +5,7 @@ import {
 } from '@reduxjs/toolkit'
 
 import { type Binance, errorBinance } from '@/home/business/models'
-import { inject } from '~/config'
+import { inject } from '~/di'
 import type { RootState } from '~/modules/store-module'
 
 const initialState: {

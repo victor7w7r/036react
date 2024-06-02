@@ -1,5 +1,3 @@
-import { block } from 'million/react'
-
 const SVGPathOne = `
   M100 50.5908C100 78.2051 77.6142 100.591 50
   100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766
