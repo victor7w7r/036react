@@ -8,6 +8,7 @@ node_modules
 .mf
 .rollup.cache
 tsconfig.tsbuildinfo
+coverage
 logs
 tsconfig.node.tsbuildinfo
 vite.config.d.ts
