@@ -2,7 +2,7 @@ import './toggler.css'
 
 import { useTheme } from '@/common/ui/hooks'
 
-export const Toggler = block(() => {
+export const Toggler = () => {
   const { isDark, toggle, togglePeer } = useTheme()
 
   return (
@@ -14,6 +14,7 @@ export const Toggler = block(() => {
         <input
           checked={isDark}
           className='peer sr-only'
+          data-testid='toggle'
           id='checked-toggle'
           onChange={toggle}
           type='checkbox'
@@ -24,4 +25,4 @@ export const Toggler = block(() => {
       </label>
     </div>
   )
-})
+}

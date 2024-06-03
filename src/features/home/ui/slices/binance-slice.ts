@@ -8,7 +8,7 @@ import { type Binance, errorBinance } from '@/home/business/models'
 import { inject } from '~/di'
 import type { RootState } from '~/modules/store-module'
 
-const initialState: {
+export const initialState: {
   data: Binance
   error: string | undefined
   loading: boolean

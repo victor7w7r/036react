@@ -22,7 +22,7 @@ const SVGPathTwo = `
   39.0409Z
 `
 
-export const Spinner = block(() => (
+export const Spinner = () => (
   <svg
     className='mr-2 size-8 animate-spin fill-white text-gray-400/50'
     fill='none'
@@ -33,4 +33,4 @@ export const Spinner = block(() => (
     <path d={SVGPathOne} fill='currentColor' />
     <path d={SVGPathTwo} fill='currentFill' />
   </svg>
-))
+)

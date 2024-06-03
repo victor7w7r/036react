@@ -12,7 +12,6 @@ declare global {
   const Route: typeof import('react-router-dom')['Route']
   const Routes: typeof import('react-router-dom')['Routes']
   const axios: typeof import('axios')['default']
-  const block: typeof import('million/react')['block']
   const createBrowserRouter: typeof import('react-router-dom')['createBrowserRouter']
   const createContext: typeof import('react')['createContext']
   const createRef: typeof import('react')['createRef']

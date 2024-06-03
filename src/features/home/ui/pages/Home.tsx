@@ -8,7 +8,7 @@ import brandwhite from '~/assets/brandwhite.png'
 import tailwind from '~/assets/tailwind.png'
 import tailwindwhite from '~/assets/tailwindwhite.png'
 
-export const Home: FC = block(() => {
+export const Home: FC = () => {
   const {
     changeBlue,
     changeEmerald,
@@ -28,6 +28,7 @@ export const Home: FC = block(() => {
           <img
             alt=''
             className='scale-75 lg:scale-100'
+            data-testid='brand'
             height={200}
             src={isDark ? brandwhite : brand}
             width={400}
@@ -41,6 +42,7 @@ export const Home: FC = block(() => {
           <img
             alt=''
             className='scale-50 lg:scale-75 tall:scale-75'
+            data-testid='tailwind'
             height={200}
             src={isDark ? tailwindwhite : tailwind}
             width={400}
@@ -63,21 +65,25 @@ export const Home: FC = block(() => {
       </div>
       <div className='mx-auto -mt-1 flex w-fit flex-row gap-7'>
         <button
+          aria-label='blue-button'
           className='blue-button'
           onClick={changeBlue}
           type='button'
         ></button>
         <button
+          aria-label='purple-button'
           className='purple-button'
           onClick={changePurple}
           type='button'
         ></button>
         <button
+          aria-label='red-button'
           className='red-button'
           onClick={changeRed}
           type='button'
         ></button>
         <button
+          aria-label='emerald-button'
           className='emerald-button'
           onClick={changeEmerald}
           type='button'
@@ -85,4 +91,4 @@ export const Home: FC = block(() => {
       </div>
     </div>
   )
-})
+}

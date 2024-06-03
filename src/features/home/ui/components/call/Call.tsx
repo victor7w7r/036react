@@ -2,7 +2,7 @@ import { Spinner } from '@/home/ui/components'
 import { fetchCoins } from '@/home/ui/slices/binance-slice'
 import { useAppDispatch, useAppSelector } from '~/modules'
 
-export const Call = block(() => {
+export const Call = () => {
   const state = useAppSelector(state => state.binanceSlice)
   const dispatch = useAppDispatch()
 
@@ -24,4 +24,4 @@ export const Call = block(() => {
       </p>
     </>
   )
-})
+}

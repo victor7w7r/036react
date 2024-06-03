@@ -6,7 +6,7 @@ import { useTheme } from '@/common/ui/hooks'
 
 import { Toggler } from '../toggler/Toggler'
 
-export const Header = block(() => {
+export const Header = () => {
   const { control } = useTheme()
 
   return (
@@ -26,4 +26,4 @@ export const Header = block(() => {
       </nav>
     </div>
   )
-})
+}

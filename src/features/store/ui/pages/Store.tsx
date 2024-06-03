@@ -7,7 +7,7 @@ import { useTheme } from '@/common/ui/hooks'
 import { mutate } from '@/common/ui/slices/data-slice'
 import { useAppDispatch } from '~/modules'
 
-export const Store = block(() => {
+export const Store = () => {
   const { control } = useTheme()
 
   const text = useRef('')
@@ -35,6 +35,7 @@ export const Store = block(() => {
         <div className='store-btn'>
           <button
             className='standard-button'
+            data-testid='send-button'
             onClick={() => dispatch(mutate(text.current))}
             type='button'
           >
@@ -46,6 +47,7 @@ export const Store = block(() => {
       <div className='centered-button-ctn'>
         <button
           className='standard-button'
+          data-testid='go-home-button'
           onClick={() => navigate('/')}
           type='button'
         >
@@ -54,4 +56,4 @@ export const Store = block(() => {
       </div>
     </div>
   )
-})
+}

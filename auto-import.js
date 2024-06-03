@@ -3,7 +3,6 @@ export var imports = [
         '~/di': ['inject'],
         '~/env': ['environment'],
         'fp-ts/lib/function': ['pipe'],
-        'million/react': ['block'],
         'react': ['createContext'],
         'react-router-dom': ['createBrowserRouter'],
         'vitest-mock-extended': ['mock']

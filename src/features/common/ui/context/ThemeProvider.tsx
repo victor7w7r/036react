@@ -32,6 +32,7 @@ export const ThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
     >
       <div
         className={`min-h-screen transition-colors duration-1000 ${theme.white} ${theme.dark}`}
+        data-testid='ThemeProvider'
       >
         {children}
       </div>

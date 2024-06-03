@@ -4,7 +4,7 @@ type CommonElements = {
   white: string
 }
 
-const stdElements: CommonElements = {
+export const stdElements: CommonElements = {
   control: 'bg-slate-700/30',
   dark: 'dark:bg-zinc-900',
   white: 'bg-white'

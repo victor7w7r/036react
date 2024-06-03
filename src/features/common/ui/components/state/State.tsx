@@ -1,6 +1,6 @@
 import { useAppSelector } from '~/modules'
 
-export const State = block(() => {
+export const State = () => {
   const count = useAppSelector(state => state.dataSlice.value)
 
   return count.length > 0 ? (
@@ -11,4 +11,4 @@ export const State = block(() => {
   ) : (
     <p className='adaptable-xl'>Store State: Not yet.</p>
   )
-})
+}

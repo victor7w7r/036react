@@ -1,5 +1,4 @@
 import react from '@vitejs/plugin-react-swc'
-import million from 'million/compiler'
 import AutoImport from 'unplugin-auto-import/vite'
 import { defineConfig } from 'vite'
 import { analyzer } from 'vite-bundle-analyzer'
@@ -29,7 +28,6 @@ export default defineConfig({
     analyzer(),
     qrcode(),
     chunkSplitPlugin(),
-    million.vite({ auto: true }),
     react(),
     tsconfigPaths()
   ]
