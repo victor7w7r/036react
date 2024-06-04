@@ -26,7 +26,7 @@ $ cd 036react
 $ git checkout blank
 ```
 
-### Run and Develop (Consider using pnpm)
+### Run and Develop (Consider using bun)
 
 ```bash
 $ cd 036react
