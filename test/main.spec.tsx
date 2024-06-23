@@ -2,14 +2,13 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 
 import { App } from '../src/App'
-
-vi.mock('react-dom/client', () => ({
-  createRoot: vi.fn().mockReturnValue({
-    render: vi.fn()
-  })
-}))
-
 describe('main', () => {
+  vi.mock('react-dom/client', () => ({
+    createRoot: vi.fn().mockReturnValue({
+      render: vi.fn()
+    })
+  }))
+
   it('renders the application without crashing', async () => {
     expect.assertions(2)
 

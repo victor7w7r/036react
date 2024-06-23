@@ -1,11 +1,11 @@
 import { Home } from '@/home/ui/pages/Home'
 import { homeRouter } from '@/home/ui/router'
 
-vi.mock('@/home/ui/pages/Home', () => ({
-  Home: () => <div>Home Component</div>
-}))
-
 describe('homeRouter', () => {
+  vi.mock('@/home/ui/pages/Home', () => ({
+    Home: () => <div>Home Component</div>
+  }))
+
   it('should define the correct path', () => {
     expect.assertions(1)
 

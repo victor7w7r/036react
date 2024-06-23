@@ -4,13 +4,13 @@ import binanceReducer, {
   initialState
 } from '@/home/ui/slices/binance-slice'
 
-const mocks = vi.hoisted(() => ({
-  useCaseMock: vi.fn()
-}))
-
-vi.mock('~/di', () => ({ inject: { resolve: mocks.useCaseMock } }))
-
 describe('binanceSlice', () => {
+  const mocks = vi.hoisted(() => ({
+    useCaseMock: vi.fn()
+  }))
+
+  vi.mock('~/di', () => ({ inject: { resolve: mocks.useCaseMock } }))
+
   it('should handle initial state', () => {
     expect.assertions(1)
 
@@ -24,6 +24,7 @@ describe('binanceSlice', () => {
 
     const action = { type: fetchCoins.pending.type }
     const state = binanceReducer(initialState, action)
+
     expect(state).toStrictEqual({
       data: errorBinance(),
       error: undefined,
@@ -36,6 +37,7 @@ describe('binanceSlice', () => {
 
     const action = { payload: errorBinance(), type: fetchCoins.fulfilled.type }
     const state = binanceReducer(initialState, action)
+
     expect(state).toStrictEqual({
       data: errorBinance(),
       error: undefined,
@@ -49,6 +51,7 @@ describe('binanceSlice', () => {
     const mockError = { message: 'Fetch failed' }
     const action = { error: mockError, type: fetchCoins.rejected.type }
     const state = binanceReducer(initialState, action)
+
     expect(state).toStrictEqual({
       data: errorBinance(),
       error: 'Fetch failed',

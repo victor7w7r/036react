@@ -2,15 +2,15 @@ import { render, screen } from '@testing-library/react'
 
 import { App } from '../src/App'
 
-vi.mock('./core/modules/store-module', () => ({
-  store: {}
-}))
-
-vi.mock('./core/router', () => ({
-  router: {}
-}))
-
 describe('app', () => {
+  vi.mock('./core/modules/store-module', () => ({
+    store: {}
+  }))
+
+  vi.mock('./core/router', () => ({
+    router: {}
+  }))
+
   it('renders ThemeProvider', () => {
     expect.assertions(1)
 

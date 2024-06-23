@@ -2,15 +2,15 @@ import { render, screen } from '@testing-library/react'
 
 import { State } from '@/common/ui/components'
 
-const mocks = vi.hoisted(() => ({
-  mockAppSelector: vi.fn()
-}))
-
-vi.mock('~/modules', () => ({
-  useAppSelector: mocks.mockAppSelector
-}))
-
 describe('state', () => {
+  const mocks = vi.hoisted(() => ({
+    mockAppSelector: vi.fn()
+  }))
+
+  vi.mock('~/modules', () => ({
+    useAppSelector: mocks.mockAppSelector
+  }))
+
   it('renders "Not yet." when count is empty', () => {
     expect.assertions(1)
 

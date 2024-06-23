@@ -4,24 +4,24 @@ import { act } from 'react'
 import { ThemeContext, ThemeProvider } from '@/common/ui/context/ThemeProvider'
 import { whiteTheme } from '~/theme'
 
-const TestComponent = () => {
-  const { setTheme, theme } = useContext(ThemeContext)
-
-  return (
-    <div>
-      <p data-testid='theme'>{JSON.stringify(theme)}</p>
-      <button
-        data-testid='set-theme'
-        onClick={() => setTheme({ ...theme, isDark: !theme.isDark })}
-        type='button'
-      >
-        Toggle Dark Mode
-      </button>
-    </div>
-  )
-}
-
 describe('sessionProvider', () => {
+  const TestComponent = () => {
+    const { setTheme, theme } = useContext(ThemeContext)
+
+    return (
+      <div>
+        <p data-testid='theme'>{JSON.stringify(theme)}</p>
+        <button
+          data-testid='set-theme'
+          onClick={() => setTheme({ ...theme, isDark: !theme.isDark })}
+          type='button'
+        >
+          Toggle Dark Mode
+        </button>
+      </div>
+    )
+  }
+
   beforeEach(() => {
     document.body.classList.remove('dark')
   })

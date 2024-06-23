@@ -3,24 +3,24 @@ import { render, screen } from '@testing-library/react'
 import { errorBinance } from '@/home/business/models'
 import { Call } from '@/home/ui/components/call/Call'
 
-const mocks = vi.hoisted(() => ({
-  mockAppState: vi.fn()
-}))
-
-vi.mock('@/home/ui/components', () => ({
-  Spinner: () => <div data-testid='spinner'>Loading...</div>
-}))
-
-vi.mock('@/home/ui/slices/binance-slice', () => ({
-  fetchCoins: vi.fn()
-}))
-
-vi.mock('~/modules', () => ({
-  useAppDispatch: vi.fn().mockReturnValue(vi.fn()),
-  useAppSelector: mocks.mockAppState
-}))
-
 describe('call', () => {
+  const mocks = vi.hoisted(() => ({
+    mockAppState: vi.fn()
+  }))
+
+  vi.mock('@/home/ui/components', () => ({
+    Spinner: () => <div data-testid='spinner'>Loading...</div>
+  }))
+
+  vi.mock('@/home/ui/slices/binance-slice', () => ({
+    fetchCoins: vi.fn()
+  }))
+
+  vi.mock('~/modules', () => ({
+    useAppDispatch: vi.fn().mockReturnValue(vi.fn()),
+    useAppSelector: mocks.mockAppState
+  }))
+
   it('renders spinner when loading', () => {
     expect.assertions(1)
 

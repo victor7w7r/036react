@@ -2,37 +2,34 @@ import { fireEvent, render, screen } from '@testing-library/react'
 
 import { Store } from '@/store/ui/pages/Store'
 
-const mocks = vi.hoisted(() => ({
-  mockDispatch: vi.fn(),
-  mockNavigate: vi.fn(),
-  mockSetText: vi.fn()
-}))
-
-vi.mock('@/common/ui/components', () => ({
-  State: () => <div>State Component</div>
-}))
-
-vi.mock('@/common/ui/hooks', () => ({
-  useTheme: () => ({ control: 'mock-control' })
-}))
-
-vi.mock('react-router-dom', () => ({
-  useNavigate: () => mocks.mockNavigate
-}))
-
-vi.mock('react', async () => {
-  const actual = await vi.importActual('react')
-  return {
-    ...actual,
-    useRef: vi.fn().mockReturnValue({ current: '' })
-  }
-})
-
-vi.mock('~/modules', () => ({
-  useAppDispatch: () => mocks.mockDispatch
-}))
-
 describe('store', () => {
+  const mocks = vi.hoisted(() => ({
+    mockDispatch: vi.fn(),
+    mockNavigate: vi.fn(),
+    mockSetText: vi.fn()
+  }))
+
+  vi.mock('@/common/ui/components', () => ({
+    State: () => <div>State Component</div>
+  }))
+
+  vi.mock('@/common/ui/hooks', () => ({
+    useTheme: () => ({ control: 'mock-control' })
+  }))
+
+  vi.mock('react-router-dom', () => ({
+    useNavigate: () => mocks.mockNavigate
+  }))
+
+  vi.mock('react', async () => ({
+    ...(await vi.importActual('react')),
+    useRef: vi.fn().mockReturnValue({ current: '' })
+  }))
+
+  vi.mock('~/modules', () => ({
+    useAppDispatch: () => mocks.mockDispatch
+  }))
+
   it('should render correctly', () => {
     expect.assertions(2)
 

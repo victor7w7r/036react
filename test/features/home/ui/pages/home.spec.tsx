@@ -3,40 +3,40 @@ import { cleanup, fireEvent, render, screen } from '@testing-library/react'
 import { useTheme } from '@/common/ui/hooks'
 import { Home } from '@/home/ui/pages/Home'
 
-const mocks = vi.hoisted(() => ({
-  isDark: false,
-  mockChangeBlue: vi.fn(),
-  mockChangeEmerald: vi.fn(),
-  mockChangePurple: vi.fn(),
-  mockChangeRed: vi.fn(),
-  mockControl: 'mock-control',
-  mockNavigate: vi.fn()
-}))
-
-vi.mock('@/common/ui/hooks', () => ({
-  useTheme: () => ({
-    changeBlue: mocks.mockChangeBlue,
-    changeEmerald: mocks.mockChangeEmerald,
-    changePurple: mocks.mockChangePurple,
-    changeRed: mocks.mockChangeRed,
-    control: mocks.mockControl,
-    isDark: mocks.isDark
-  })
-}))
-
-vi.mock('react-router-dom', () => ({
-  useNavigate: () => mocks.mockNavigate
-}))
-
-vi.mock('@/common/ui/components', () => ({
-  State: () => <div>State Component</div>
-}))
-
-vi.mock('@/home/ui/components', () => ({
-  Call: () => <div>Call Component</div>
-}))
-
 describe('home', () => {
+  const mocks = vi.hoisted(() => ({
+    isDark: false,
+    mockChangeBlue: vi.fn(),
+    mockChangeEmerald: vi.fn(),
+    mockChangePurple: vi.fn(),
+    mockChangeRed: vi.fn(),
+    mockControl: 'mock-control',
+    mockNavigate: vi.fn()
+  }))
+
+  vi.mock('@/common/ui/hooks', () => ({
+    useTheme: () => ({
+      changeBlue: mocks.mockChangeBlue,
+      changeEmerald: mocks.mockChangeEmerald,
+      changePurple: mocks.mockChangePurple,
+      changeRed: mocks.mockChangeRed,
+      control: mocks.mockControl,
+      isDark: mocks.isDark
+    })
+  }))
+
+  vi.mock('react-router-dom', () => ({
+    useNavigate: () => mocks.mockNavigate
+  }))
+
+  vi.mock('@/common/ui/components', () => ({
+    State: () => <div>State Component</div>
+  }))
+
+  vi.mock('@/home/ui/components', () => ({
+    Call: () => <div>Call Component</div>
+  }))
+
   it('should render correctly', () => {
     expect.assertions(8)
 
@@ -67,6 +67,7 @@ describe('home', () => {
     render(<Home />)
 
     fireEvent.click(screen.getByText(/go to store/i))
+
     expect(mocks.mockNavigate).toHaveBeenCalledWith('/store')
   })
 
@@ -78,15 +79,13 @@ describe('home', () => {
     render(<Home />)
 
     fireEvent.click(screen.getByLabelText(/blue-button/i))
-    expect(changeBlue).toHaveBeenCalled()
-
     fireEvent.click(screen.getByLabelText(/purple-button/i))
-    expect(changePurple).toHaveBeenCalled()
-
     fireEvent.click(screen.getByLabelText(/red-button/i))
-    expect(changeRed).toHaveBeenCalled()
-
     fireEvent.click(screen.getByLabelText(/emerald-button/i))
+
+    expect(changeBlue).toHaveBeenCalled()
+    expect(changePurple).toHaveBeenCalled()
+    expect(changeRed).toHaveBeenCalled()
     expect(changeEmerald).toHaveBeenCalled()
   })
 })

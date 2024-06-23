@@ -1,11 +1,11 @@
 import { Store } from '@/store/ui/pages/Store'
 import { storeRouter } from '@/store/ui/router'
 
-vi.mock('@/store/ui/pages/Store', () => ({
-  Store: () => <div>Store Component</div>
-}))
-
 describe('storeRouter', () => {
+  vi.mock('@/store/ui/pages/Store', () => ({
+    Store: () => <div>Store Component</div>
+  }))
+
   it('should define the correct path', () => {
     expect.assertions(1)
 

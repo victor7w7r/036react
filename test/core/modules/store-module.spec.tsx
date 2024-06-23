@@ -8,6 +8,7 @@ describe('storeModule', () => {
     expect.assertions(2)
 
     const state = store.getState()
+
     expect(state).toHaveProperty('binanceSlice')
     expect(state).toHaveProperty('dataSlice')
   })
@@ -18,6 +19,7 @@ describe('storeModule', () => {
     const { result } = renderHook(useAppDispatch, {
       wrapper: ({ children }) => <Provider store={store}>{children}</Provider>
     })
+
     expect(result.current).toStrictEqual(store.dispatch)
   })
 
@@ -27,6 +29,7 @@ describe('storeModule', () => {
     const { result } = renderHook(() => useAppSelector(state => state), {
       wrapper: ({ children }) => <Provider store={store}>{children}</Provider>
     })
+
     expect(result.current).toStrictEqual(store.getState())
   })
 })

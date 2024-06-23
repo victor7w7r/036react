@@ -4,15 +4,10 @@ import { errorBinance } from '@/home/business/models'
 import { BinanceDataSource, binanceDataSource } from '@/home/data/datasources'
 import { timeout } from '~/modules'
 
-vi.mock('awilix', async () => {
-  const awilix = await vi.importActual('awilix')
-  return {
-    ...awilix,
-    asFunction: vi.fn().mockReturnValue({
-      singleton: vi.fn().mockReturnValue({})
-    })
-  }
-})
+vi.mock('awilix', async () => ({
+  ...(await vi.importActual('awilix')),
+  asFunction: vi.fn(() => ({ singleton: vi.fn() }))
+}))
 
 describe('binanceDataSource', () => {
   let axiosInstance: ReturnType<typeof mock<AxiosInstance>>
